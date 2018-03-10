@@ -1,0 +1,51 @@
+$max-width: 960px;
+$grid-columns: 12;
+$column: 60px;
+$gutter: 20px;
+$mobile: new-breakpoint(max-width 840px 4);
+
+.wrap {
+	@include outer-container;
+	@include media($mobile) {
+		@include padding(null 5vh);
+	}
+}
+
+#projects {
+	div {
+		@include outer-container;
+		@include media($mobile) {
+			@include padding(null 5vh);
+		}
+	}
+	h2 {
+		@include span-columns(1);
+		@include media($mobile) {
+			display: none;
+		}
+	}
+	h1 {
+		@include span-columns(6);
+		@include media($mobile) {
+			width: 100%;
+		}
+	}
+	time {
+		@include span-columns(1);
+		@include shift(4);
+		@include omega();
+		@include media($mobile) {
+			width: auto;
+			margin: 0;
+			@include position(absolute, 0 5vh null null);	
+		}
+		
+	}
+	section {
+		@include span-columns(5);
+	}
+}
+
+#work .wrap {
+	@include outer-container;
+}

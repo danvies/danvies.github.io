@@ -1,0 +1,104 @@
+// Fonts
+
+$heading: 'Playfair Display';
+$copy: 'Cutive Mono';
+$alt: 'Montserrat';
+
+// Sizes
+
+$modular-scale-base: .6em;
+
+body {
+	font-family: $copy;
+	font-size: modular-scale(2);
+	color: $dark-grey;
+}
+
+a {
+	color: inherit;
+	text-decoration: line-through;
+	&:hover {
+		color: $orange;
+		text-decoration: none;
+	}
+}
+
+h1.logo {
+	line-height: 100px;
+	font-family: $alt;
+	font-size: modular-scale(1);
+	letter-spacing: .2em;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.banner {
+	h1 {
+		@include margin(null null .8em null);
+		font-family: $heading;
+		line-height: 15vh;
+		font-size: 10vh;
+		font-weight: normal;
+		letter-spacing: .05em;
+		color: $black;
+	}
+	p {
+		line-height: 4.5vh;
+		font-size: 3vh;
+	}
+}
+
+#footer {
+	p {
+		margin: 0;
+		line-height: 100px;
+		font-size: modular-scale(1);
+	}
+}
+
+#projects {
+	h2, time, p, dt {
+		line-height: 150px;
+		font-family: $alt;
+		font-size: modular-scale(1);
+		letter-spacing: .2em;
+		color: $orange;
+		text-transform: uppercase;
+		@include media($mobile) {
+			line-height: 100px;
+		}
+	}
+	h2 {
+		color: $black;
+	}
+	time {
+		text-align: right;
+	}
+	p, dt {
+		font-size: modular-scale(0);
+		letter-spacing: .1em;
+		font-weight: 700;
+	}
+	h1 {
+		line-height: 150px;
+		font-family: $heading;
+		font-size: modular-scale(4);
+		font-weight: normal;
+		color: $black;
+		@include media($mobile) {
+			line-height: 100px;
+			font-size: modular-scale(3);
+		}
+	}
+	dt {
+		@include margin(null null 10px null);
+		line-height: modular-scale(1);
+		color: $black;
+	}
+	dd {
+		margin: 0;
+		text-indent: 0;
+		font-size: modular-scale(1);
+		color: $dark-grey;
+	}
+}
